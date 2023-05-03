@@ -1,0 +1,97 @@
+.container {
+    width: 1200px;
+    background-color: bisque;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: grid;
+    /* without responsiveness */
+    /* grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 200px 200px 200px; */
+
+    /*with responsiveness*/
+    grid-template-columns: 1fr 2fr 3fr;
+    grid-template-rows: 3fr 2fr 1fr;
+
+    grid-row-gap: 30px;
+    grid-column-gap: 60px;
+}
+
+.item1 {
+    background: #000;
+}
+
+.item2 {
+    background: yellow;
+}
+
+.item3 {
+    background: yellowgreen;
+}
+
+.item4 {
+    background: rgb(32, 251, 255);
+}
+
+.item5 {
+    background: rgb(17, 0, 255);
+}
+
+.item6 {
+    background: maroon;
+}
+
+.item7 {
+    background: purple;
+}
+
+.item8 {
+    background: red;
+}
+
+.item9 {
+    background: pink;
+}
+
+/* exchanging the positions of item 1 and item 3 */
+.item3 {
+    /*grid-row:begin/end*/
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+.item1 {
+    grid-row: 1/2;
+    grid-column: 3/4;
+}
+
+/*further exchanging the positions of item 1 and item 9 */
+
+.item1 {
+    grid-row: 3/4;
+    grid-column: 3/4;
+}
+
+.item9 {
+    grid-row: 1/2;
+    grid-column: 3/4;
+}
+
+/*Spanning say one item across the row, let's say we have to span row 5*/
+
+.item5 {
+    grid-row: 2/3;
+    grid-column: 1/4;
+}
+
+/*In the above way to span, we have to manually calculate the no of boxes it should span, suppose we don't have the idea on how much cols are there and we have to still span a div from starting till the end, we do so by the following method using '-1'*/
+
+/*Spanning across the column*/
+.item6 {
+    grid-row: 3/4;
+    grid-column: 1/-1;
+}
+
+/*Spanning across the row*/
+/* .item6 {
+    grid-column: 3/4;
+    grid-row: 1/-1;
+} */
